@@ -20,7 +20,13 @@
         <input type="text" name="joindate" value="${shop.joindate}"> <br>
         <input type="text" name="grade" value="${shop.grade}"> <br>
         <input type="text" name="city" value="${shop.city}"> <br>
-        <input type="submit" value="수정">
+        <input type="submit" value="수정" onclick="fun1()">
     </form>
 </body>
+<script>
+    const fun1 = () => {
+        alert("회원정보수정이 완료 되었습니다.");
+        location.href = "/";
+    }
+</script>
 </html>

@@ -10,13 +10,13 @@
 <head>
     <title>Title</title>
   <script>
-    const result = '${result}';
+    const result = '${shop}';
     if(result > 0) {
       alert("회원정보수정이 완료 되었습니다.");
       location.href = "/";
     } else {
-      alert("회원정보수정에 실패 하였습니다.")
-      location.href = "/update";
+        alert("회원정보수정에 실패 하였습니다.")
+        location.href = "/update";
     }
   </script>
 </head>

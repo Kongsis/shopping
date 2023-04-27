@@ -24,8 +24,8 @@ public class ShopRepository {
         return sql.selectOne("Shop.findById", id);
     }
 
-    public void update(ShopDTO shopDTO) {
-        sql.update("Shop.update", shopDTO);
+    public int update(ShopDTO shopDTO) {
+        return sql.update("Shop.update", shopDTO);
     }
 
     public void delete(Long id) {

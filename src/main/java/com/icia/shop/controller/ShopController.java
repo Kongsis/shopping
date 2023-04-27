@@ -52,12 +52,12 @@ public class ShopController {
         return "update";
     }
     @PostMapping("/update")
-    public String update(@ModelAttribute ShopDTO shopDTO) {
+    public String update(@ModelAttribute ShopDTO shopDTO, Model model) {
         shopService.update(shopDTO);
+        model.addAttribute("shop", shopDTO);
 //        return "redirect:/detail?id="+shopDTO.getId();
         return "index";
     }
-    // 삭제처리
     @GetMapping("/delete")
     public String delete(@RequestParam("id") Long id) {
         shopService.delete(id);

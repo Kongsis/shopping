@@ -9,10 +9,14 @@
             values (#{custname}, #{phone}, #{address}, #{joindate}, #{grade}, #{city})
     </insert>
     <select id="findAll" resultType="shop">
-        select * from member_tbl_02
+        select id, custname, phone, address, joindate,
+               case when grade='A' then 'VIP'
+                    when grade='B' then '일반'
+                    when grade='C' then '직원'
+                   end as 'grade', city from member_tbl_02
     </select>
     <select id="findById" parameterType="Long" resultType="shop">
-        select * from member_tbl_02 where id=(#{id})
+        select * from member_tbl_02 where id=#{id}
     </select>
     <update id="update" parameterType="shop">
         update member_tbl_02 set custname=#{custname}, phone=#{phone}, address=#{address},

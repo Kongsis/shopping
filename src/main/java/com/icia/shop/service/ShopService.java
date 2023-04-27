@@ -24,8 +24,8 @@ public class ShopService {
         return shopRepository.findById(id);
     }
 
-    public void update(ShopDTO shopDTO) {
-        shopRepository.update(shopDTO);
+    public int update(ShopDTO shopDTO) {
+        return shopRepository.update(shopDTO);
     }
 
     public void delete(Long id) {
